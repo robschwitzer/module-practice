@@ -1,9 +1,11 @@
 var https = require('https');
 
-function getAndPrintHTML () {
-  var requestOptions = {
-  host: 'sytantris.github.io',
-  path: '/http-examples/step1.html'
+var address = ['sytantris.github.io', '/http-examples/step1.html'];
+
+function getAndPrintHTML (options) {
+  requestOptions = {
+  host: options[0],
+  path: options[1]
   };
 
 
@@ -14,7 +16,6 @@ function getAndPrintHTML () {
     };
     response.setEncoding('utf-8');
     var buffer = new Buffer(8);
-    // var buffer = {};
       console.log('this is the buffer length: ', buffer.length);
       // console.log(typeof buffer);
     response.on('data', function(chunk){
@@ -26,5 +27,4 @@ function getAndPrintHTML () {
     });
   });
 }
-
-getAndPrintHTML()
+getAndPrintHTML(address)
