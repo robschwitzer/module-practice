@@ -20,3 +20,6 @@ function getAndPrintHTMLChunks () {
   });
 };
 getAndPrintHTMLChunks();
+
+exports.getAndPrintHTMLChunks = getAndPrintHTMLChunks;
+exports.requestOptions = requestOptions;

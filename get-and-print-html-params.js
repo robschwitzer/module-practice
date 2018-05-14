@@ -28,3 +28,6 @@ function getAndPrintHTML (options) {
   });
 }
 getAndPrintHTML(address)
+
+exports.address = address;
+exports getAndPrintHTML = getAndPrintHTML;
